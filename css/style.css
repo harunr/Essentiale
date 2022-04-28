@@ -1,0 +1,841 @@
+
+/* Fonts style */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+
+
+
+
+
+/* // End Fonts style */
+
+
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{ 
+    list-style: none;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{
+    border:0;
+}
+a,input,select,textarea{
+    outline:none;
+}
+input::-moz-focus-inner{
+    border:0; padding: 0;
+}
+
+img{
+    float: left;
+}
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block;}
+/*a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}*/
+
+
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: rgb(255,255,255); color: rgb(60,60,60); -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:auto; font-family: 'Open Sans', sans-serif; font-weight: 400;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+.main-wrap{float: left; width: 100%; overflow-x: hidden; position: relative;}
+.center-wrap{max-width: 1270px; padding: 0 15px; margin: 0 auto; clear: both; overflow: hidden;}
+.main-header,.header-upper,section,.upper-content-wrap,.content-row{float: left; width: 100%;}
+.main-header{z-index: 100}
+.header-upper p{float: left; font-size: 10px; text-transform: uppercase; color: #231f20; font-weight: 400; letter-spacing: 0.4px; line-height: 15px; padding: 7px 32px;}
+.header-upper p span{color: #24b1ae}
+.upper-logo{float: right; margin: 6px 15px 7px 0; width: 90px; cursor: pointer;}
+.upper-logo img{width: 100%;}
+
+.main-header-wrap{float: left; width: 100%; padding: 42px 0 51px; background: #f5f6f7; padding-right: 68px; position: relative;}
+
+.main-log{float: left; width: 16.38225255972696%; max-width: 192px; margin: 12px 2.218430034129693% 0 32px;}
+.main-log a{display: block;}
+.main-log img{width: 100%;}
+
+#phone-nav{position: absolute; right: 15px; top: 15px; width: 23px; display: none;}
+#phone-nav div{float: left; width: 23px; height: 2px; margin: 3px 0; background: #221f1f;}
+nav#main-nav{float: left; max-width: 867px; width: 73.97610921501706%; }
+nav#main-nav ul li{float: left; text-align: center; background: #9ba8b0; max-width: 173px; width: 19.95386389850058%;}
+nav#main-nav ul li:nth-child(even){background: #afb8be; width: 20.06920415224913%; max-width: 174px;}
+nav#main-nav ul li a{display: block; font-size: 16px; line-height: 20px; color: #ffffff; text-align: center; font-weight: 700; text-transform: uppercase; padding: 16px 0;}
+nav#main-nav ul li a span{color: #4e4d4d; text-transform: initial;}
+nav#main-nav ul li:hover,nav#main-nav ul li.active{background: #24b1ae;}
+.social-wrap{max-width: 49px; width: 4.173764906303237%; float: right; margin: 10px 34px 0 3%; position: absolute; right: 0;}
+.social-wrap img{width: 100%;}
+.content-wrap{float: left; width: 80%;}
+aside{float: left; width: 20%}
+.content-row figure.capsule-box{float: left; width: 50%; max-width: 494px;}
+figure.capsule-box img{width: 100%;}
+.welcome-text-wrap{float: left; width: 50%; padding: 45px}
+.welcome-text-wrap h2{font-size: 40px; line-height: 36px; letter-spacing: -1px; color: #231f20; font-weight: 700; padding-top: 35px;}
+.welcome-text-wrap h2 span{color: #24b1ae;}
+.welcome-text-wrap h2 sup{font-size: 22px; margin-left: -7px;}
+.welcome-text-wrap h6{font-size: 16px; line-height: 20px; color: #231f20; font-weight: 700; padding: 30px 0 38px;}
+.welcome-text-wrap div{float: left; width: 100%; border-bottom: 2px solid #24b1ae;}
+.welcome-text-wrap p{padding-top: 30px; font-size: 18px; line-height: 25px; color: #9aa8af; font-weight: 300; float: left;}
+.welcome-text-wrap p sup{font-size: 10px;}
+.content-row:nth-child(2){padding-top: 20px;}
+.content-row h3{float: left; padding-left: 40px; padding-top: 55px; padding-bottom: 20px; font-size: 30px; line-height: 32px; color: #9aa8af; font-weight: 300; max-width: 320px; width: 32.32323232323232%;}
+
+.content-row figure{float: right; max-width: 638px; width: 64.44444444444444%;}
+.content-row figure img{float: left; width: 100%;}
+aside figure{float: left; width: 100%; position: relative;}
+aside figure img,aside figure a img{float: left; width: 100%;}
+aside figure a.play-btn{position: absolute; left: 50%; top: 50%; width: 70px; height: 70px; margin-top: -35px; margin-left: -35px; display: block;}
+.side-bar-text{float: left; width: 100%; background: #f5f6f7; padding: 25px 45px 20px 30px;}
+.side-bar-text dfn{display: block; font-size: 14px; color: #231f20; text-transform: uppercase; font-weight: 400; font-style: normal;}
+.side-bar-text h4{font-size: 24px; line-height: 25px; color: #231f20; letter-spacing: -1px; padding-top: 25px; font-weight: 600;}
+.side-bar-text h4 span{color: #ee7402;}
+.side-bar-text h4 sup{font-size: 14px;}
+.side-bar-text a{font-size: 14px; color: #231f20; line-height: 16px; font-weight: 400; margin-top: 34px;}
+.side-bar-text a:hover{text-decoration: underline;}
+.fb-like-figure a{display: block;}
+
+.shoping-card,.shoping-card figure img,.lower-content-wrap,.post-summary, .post-summary .col img,.lower-content-wrap .right-col img,.footer-logo img{float: left; width: 100%;}
+.shoping-card figure{float: left; width: 69px; height: 69px;}
+.shoping-card figure a{display: block;}
+.shoping-card span{float: left; width: auto; display: inline-block; padding: 23px 30px; font-size: 16px; line-height: 20px; color: #231f20; font-weight: 300;}
+.shoping-card span a{font-weight: 700; color: #231f20;}
+.shoping-card span a:hover{text-decoration: underline;}
+
+.lower-content-wrap{background: #f5f6f7; padding-top: 70px;}
+.lower-content-wrap .left-col{float: left; max-width: 495px; width: 39.91935483870968%;}
+.post-summary{background: #ffffff; position: relative;}
+.post-summary .col{float: left; width: 50%; position: relative;}
+
+.post-summary .col .overlay-text{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .37); }
+.post-summary .col .overlay-text P{ width: 165px; margin: 0 auto; clear: both; padding-top: 43px; overflow: hidden; font-size: 30px; color: #ffffff; line-height: 32px; text-align: center; font-weight: 600; text-transform: uppercase;}
+.post-summary .col .pluse{position: absolute; right: 0; bottom: 0; width: 39px; height: 39px;}
+.pluse{position: absolute; right: 0; bottom: 0; width: 39px; height: 39px;}
+.post-summary-text{padding: 0 65px 0 30px;}
+.post-summary-text p{font-size: 16px; line-height: 23px; color: #24b1ae; padding-top: 42px; font-weight: 700;}
+.post-summary-text a{color: #4e4d4d; font-size: 16px; line-height: 20px; padding-top: 7px; font-weight: 300;}
+.post-summary-text a:hover{text-decoration: underline;}
+.left-col .lower-text{float: left; width: 100%; padding: 85px 0 25px 50px; font-size: 20px; line-height: 23px; color: #231f20; font-weight: 300;}
+.left-col .lower-text span{font-weight: 700; display: block;}
+.left-col .lower-text sup{font-size: 12px;}
+
+.lower-content-wrap .right-col{float: left; width: 60.08064516129032%; position: relative;}
+.lower-content-wrap .right-col .overlay-text{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .3);}
+.lower-content-wrap .right-col .overlay-text h3{font-size: 36px; line-height: 38px; color: #ffffff; font-weight: 700; text-transform: uppercase; padding-top: 130px; padding-left: 70px;}
+.lower-content-wrap .right-col .overlay-text .inner-overlay{position: absolute; right: 0; top: 0; width: 250px; height: 100%; background: rgba(0, 0, 0, .4); font-size: 16px; line-height: 23px; color: #ffffff; font-weight: 600; padding-top: 135px; padding-left: 30px;}
+.lower-content-wrap .right-col .overlay-text .inner-overlay sup{font-size: 10px;}
+.main-footer{float: left; width: 100%; margin: 68px 0 40px; background: #f5f5f6; border-top: 18px solid #eff1f2; border-right: 19px solid #eff1f2; border-bottom: 18px solid #eff1f2; border-left: 19px solid #eff1f2; padding: 42px 35px 35px;}
+
+.single-widget{float: left; max-width: 285px; width: 25.15445719329214%; margin-right: 6.619593998234775%;}
+.single-widget div{font-size: 16px; line-height: 27px; color: #9aa8af; font-weight: 700; text-transform: uppercase;}
+.single-widget ul li{float: left; width: 100%; padding-left: 23px; background: url(../images/list-item-bg-pluse.png) no-repeat left 10px; font-size: 14px;  line-height: 27px;}
+.single-widget ul li a{color: #4e4d4d; }
+.single-widget ul li a:hover{text-decoration: underline;}
+.copy-right-area{float: right; max-width: 350px; text-align: right;}
+.footer-logo{float: right; max-width: 211px; width: 60.28571428571429%; padding-top: 7px;}
+
+.copy-right-area p,.copy-right-area div{font-size: 12px; line-height: 23px; color: #4e4d4d; text-decoration: underline; font-weight: 700; float: left; width: 100%;}
+.copy-right-area p:nth-child(2){padding-top: 30px;}
+.copy-right-area div{font-weight: 300; text-decoration: none;}
+
+
+
+/*==Beginning Contact Paage==========*/
+.page-wrap{ float: left; width: 100%; position: relative;}
+.commono-wrap{ margin: 0 auto; max-width: 1270px; clear: both; width: 100%; padding: 0 15px}
+.contact-page-section{ float:left; width: 100%; background: #ffffff; padding-bottom: 40px;}
+.contact-essential{ float:left; padding-top: 80px; max-width: 410px; width:33.06451612903226%;margin-left: 2.419354838709677%; }
+
+.essential-title{float: left; width: 100%; font-size: 18px; line-height: 24px; color: #000000; text-transform:uppercase; font-weight: 700}
+.pay-link{ float: left; width: 100%; margin-top: 20px}
+.pay-link a{ float: left; width:auto; margin: 21px 0 0 7.317073170731707%; display: inline-block;}
+.pay-link a img{ float: left; width:100%}
+.pay-link a:first-child{ margin-left: 0px; width: 21.21951219512195%; max-width: 87px;}
+.pay-link a:nth-child(2){width: 29.26829268292683%; max-width: 120px;}
+.pay-link a:nth-child(3){width: 29.75609756097561%; max-width: 122px;}
+.pay-link a:nth-child(4){ margin-left: 0px; width: 25.36585365853659%; max-width: 104px;} 
+.pay-link a:last-child{width: 46.09756097560976%; max-width: 189px;}
+.card-online{ float: left; width: 100%; margin-top:60px}
+.card-image{ float:left; width: 65px;}
+.card-image img{ float:left; width:100%;}
+.card-online span{ float:left; width: auto; margin-left: 30px; font-size: 20px; line-height: 24px; font-weight: 400; color: #333333}
+.card-online span a{ margin-left: 5px; color: #333333; font-weight: 700}
+.card-online span a:hover{text-decoration: underline;}
+.essential-image{ float: left; max-width: 388px; padding-top: 35px}
+.essential-image img{ float: left;  width: 100%;}
+.send-message{ float: left; max-width: 495px; width:39.91935483870968%; margin-left: 4.67741935483871%; background: #24B0AD; }
+.message-form{ float: left; width: 100%; padding: 80px 48px 34px 47px}
+.message-form h4{ float: left; width: 100%; font-size: 26px; line-height: 30px; color: #ffffff; font-weight: 700}
+.form-wrap{ float: left; width: 100%;margin-top: 42px;border: 3px solid #43BBB9;}
+.row,.message-box{ float: left; width: 100%;border-bottom:3px solid #43BBB9;  }
+
+.field,.message-box textarea{ float: left; width: 100%; font-size: 14px; height: 54px;line-height: 18px; font-family: 'Open Sans', sans-serif; padding: 18px 18px 18px 19px; background: #24B0AD; color: #92d8d7; font-weight: 300; border: 0;}
+.message-box{border-bottom: 0;}
+.message-box textarea{ height: 162px; resize: none;}
+.captcha-section{ float: left; width: 100%; background: #ffffff; padding: 16px 15px; 15px; margin-top: 14px;}
+.captcha-image{ margin: 0 auto; max-width: 248px; width: 100%;}
+.captcha-image img{ float: left ;width: 100%; cursor: pointer}
+.send-message-btn{ float: left; width: 100%; margin-top: 16px; background: #ffffff; }
+.send-btn{text-align: center; color: #25b1ae; width: 100%; padding:20.5px 0;font-size: 17px; height: 59px; line-height: 18px;font-family: 'Open Sans', sans-serif;font-weight: 700; border: 0; cursor: pointer}
+
+.aside-text-right{ float: left; max-width: 186px; width:15%;margin-left: 2.419354838709677%; padding-top: 38px; }
+.aside-text-right p{ float: left; width: 100%; font-size: 12px; line-height: 18px; color: #4d4d4d; font-weight: 300; margin-bottom: 14px}
+.aside-text-right a{ font-size: 12px; line-height: 18px; color: #4d4d4d; font-weight: 700;}
+
+/*==End Contact Paage==========*/
+
+/* Begin Blog post page */
+.blog-post-page{padding-bottom: 40px;}
+.blog-sidebar{float: left; width: 39.91935483870968%; max-width: 495px;}
+.blog-sidebar figure, .blog-sidebar figure img{float: left; width: 100%;}
+.similar-post{float: left; width: 100%; padding-left: 43px; padding-top: 33px;}
+.similar-post h6{float: left; width: 100%; font-size: 16px; line-height: 20px; color: #231f20; font-weight: 700;}
+.similar-post ul{float: left; width: 100%; padding-top: 27px;}
+.similar-post ul li{float: left; width: 100%; padding: 7px 0 8px 56px; background: url(../images/similar-post-li-bg.jpg) no-repeat left 0; margin: 7px 0; font-size: 18px; font-weight: 700; line-height: 25px;}
+.similar-post ul li:nth-child(even){background: url(../images/similar-post-li-bg-even.jpg) no-repeat left 0;}
+.similar-post ul li a{display: inline-block; color: #4d4d4d;}
+.similar-post ul li a:hover{text-decoration: underline;}
+.post-content{float: right; width: 56.29032258064516%; margin-left: 3.790322580645161%;}
+.post-content span{font-size: 13px; color: #4d4d4d; line-height: 18px; font-weight: 300; padding-top: 70px; display: block;}
+.post-content h3{font-size: 36px; color: #333333; line-height: 38px; font-weight: 700; padding-top: 45px; letter-spacing: -1px; max-width: 550px; max-width: 570px;}
+.post-content h6{font-size: 18px; color: #4d4d4d; line-height: 25px; font-weight: 700; padding-top: 35px; padding-bottom: 30px; max-width: 570px;}
+.post-content h6 sup{font-size: 14px;}
+.post-content p{font-size: 13px; color: #4d4d4d; line-height: 21px; font-weight: 300; padding-top: 20px; max-width: 570px;}
+.post-content p sup{font-size: 10px;}
+.post-content p.nh{color: #f47b20; font-weight: 700;}
+.post-content a{color: #4d4d4d; font-size: 16px; line-height: 25px; font-weight: 700; margin-top: 55px; letter-spacing: -.5px;}
+.post-content a:hover{text-decoration: underline;}
+/* //End Blog post page */
+
+/* Begin essentiale extreme page */
+.essensiale-extreme-page{padding-bottom: 20px;}
+.essensiale-extreme-page .content-wrap{float: left; width: 80%;}
+.essensiale-extreme-page .content-row{position: relative;}
+.essensiale-extreme-page .content-row:first-child{background: #ffffff; padding: 75px 30px 65px 45px;}
+.essensiale-extreme-page .content-row:first-child h2{float: left; width: 50%; font-size: 36px; color: #231f20; font-weight: 700; line-height: 38px; letter-spacing: -1px;}
+.essensiale-extreme-page .content-row p{float: left; width: 50%; font-size: 16px; color: #4d4d4d; font-weight: 300; line-height: 23px; padding-left: 15px;}
+.essensiale-extreme-page .content-row p span{font-weight: 700;}
+.essensiale-extreme-page .content-row:nth-child(2){background: #f5f6f7; position: relative; padding-left: 255px; padding-top: 45px;}
+.essensiale-extreme-page .content-row:nth-child(2) figure{background: #f5f6f7; float: right; max-width: 736px; width: 100%; padding-right: 50px; padding-bottom: 40px;}
+.essensiale-extreme-page .content-row:nth-child(2) figure img{width: 100%;}
+.essensiale-extreme-page .content-row:nth-child(2) .support-text{position: absolute; left: 0; bottom: 0; padding-left: 45px; padding-bottom: 55px; max-width: 325px;}
+.essensiale-extreme-page .content-row:nth-child(2) .support-text h3{float: left; font-size: 28px; line-height: 34px; color: #231f20; font-weight: 700; padding: 0; width: 100%;}
+.essensiale-extreme-page .content-row:nth-child(2) .support-text h3 span{display: block; color: #25b1ae;}
+.essensiale-extreme-page .content-row:nth-child(2) .support-text p{font-size: 16px; color: #4d4d4d; line-height: 23px; padding-top: 35px; padding-left: 0; width: 100%; font-weight: 700;}
+.essensiale-extreme-page .content-row:nth-child(3){background: #f5f6f7; padding-left: 245px;}
+.fun-fact{max-width: 245px; background: #ffffff; position: absolute; left: 0; top: 0; height: 100%; font-size: 14px; color: #4d4d4d; line-height: 19px; font-weight: 300; padding: 40px 25px 25px 30px}
+.fun-fact span{font-weight: 700; color: #f47b20;}
+.fun-fact sup{font-size: 10px;}
+.why-daily-epls, .why-daily-epls figure,.why-daily-epls figure img{float: left; width: 100%; }
+.why-daily-epls{padding: 45px 50px;}
+.why-daily-epls figure{width: 100%; max-width: 524px; margin: 0 auto 0; clear: both; overflow: hidden; float: none; padding-top: 45px;}
+.why-daily-epls h3{float: left; width: 100%; color: #4d4d4d; font-size: 24px; line-height: 27px; padding: 0; font-weight: 700;}
+.essensiale-extreme-page .content-row .why-daily-epls p{float: left; width: 100%; color: #4d4d4d; font-size: 16px; line-height: 20px; padding:  28px 0 0; text-align: left;}
+.essensiale-extreme-page .content-row .why-daily-epls p sup{font-size: 10px;}
+.mobi{display: none;}
+.desktop{display: block;}
+
+.extreme-sidebar{float: right; /*max-width: 245px;*/}
+.due-to-higher,.contain-300mg{float: left; width: 100%; background: #f5f6f7; padding: 35px 30px; font-size: 14px; line-height: 21px; color: #4d4d4d; font-weight: 300; }
+.due-to-higher span{font-weight: 700;}
+.due-to-higher sup{font-size: 10px;}
+.contain-300mg{ background: #ffffff; padding: 72px 30px 65px;}
+.contain-300mg span{color: #25b1ae; font-size: 38px; line-height: 41px; font-weight: 700; display: block;}
+.contain-300mg dfn{font-weight: 700; font-style: normal; padding-top: 10px; float: left; letter-spacing: 1px;}
+.contain-300mg sup{font-size: 10px; /*font-weight: 700;*/}
+.item-list{float: left; width: 100%; background: url(../images/item-list-bg.jpg) no-repeat center center; background-size: cover; padding: 40px 15px 22px 30px; }
+.item-list ul{float: left; width: 100%;}
+.item-list ul li{float: left; width: 100%; padding: 5px 0 5px 48px; margin: 6px 0; color: #ffffff; font-weight: 300;}
+.item-list ul li:first-child{font-weight: 700; background: url(../images/list-item-icon-capsul.png) no-repeat left top;}
+.item-list ul li:nth-child(2){background-position: left -44px; background: url(../images/list-item-icon-times.png) no-repeat left 2px;}
+.item-list ul li:nth-child(3){background-position: left bottom; background: url(../images/list-item-icon-meals.png) no-repeat left 5px;}
+.item-list div{float: left; width: 100%; padding-top: 15px; font-size: 12px; line-height: 17px; color: #ffffff; font-weight: 300;}
+.why-take{float: left; width: 100%; padding: 40px 30px 44px; background: #f47b20; font-size: 16px; line-height: 23px; font-weight: 300; color: #ffffff;}
+.why-take span{font-weight: 700;}
+.why-take sup{font-size: 10px;}
+.buy-online{float: left; width: 100%; background: #ffffff; padding: 45px 30px 35px; }
+.buy-online img{float: left; width: 58px; height: 59px; }
+.buy-online p{float: left; width: 100%; font-size: 16px; color: #231f20; line-height: 18px; padding-top: 25px; font-weight: 300;}
+.buy-online a{color: #231f20; font-weight: 700;}
+.buy-online a:hover{text-decoration: underline;}
+.buy-online p span{display: inline-block; font-weight: 700;}
+/* //End essentiale extreme page */
+
+/* Begin phospholipids page */
+.phospholipids-page{padding-bottom: 23px;}
+.respect-your-liver .upper-content-wrap,.phospholipids-page .upper-content-wrap{background: #eff1f2; padding-bottom: 75px;}
+.what-are-essential-row,.food-containing-row{float: left; width: 100%;}
+.what-are-essential-row{background: #ffffff;}
+.what-does-liver,.what-are-essential-text-wrap{float: left; max-width: 495px; width: 39.91935483870968%;}
+.what-does-liver h2,.what-are-essential-text-wrap h2{font-size: 40px; line-height: 38px; background: #ffffff; padding: 80px 0 90px 45px; font-weight: 700; width: 100%; float: left; }
+.what-are-essential-text-wrap .lower-text{float: left; width: 100%; background: #24b1ae; padding: 65px 45px 26px; font-size: 16px; line-height: 23px; color: #ffffff; font-weight: 400; min-height: 250px;}
+.what-are-essential-text-wrap .lower-text span{display: inline-block; font-weight: 700;}
+.what-are-essential-text-wrap .lower-text sup{font-size: 10px;}
+.phospholids-figure{float: left; max-width: 496px; width: 40%; position: relative}
+.phospholids-figure img{width: 100%;}
+.what-are-essential-row aside{width: 20.08064516129032%;}
+.when-liver{float: left; width: 100%; background: #ee7402; padding: 35px 30px 40px; font-size: 14px; line-height: 21px; color: #ffffff; font-weight: 400;}
+.when-liver b{font-weight: 700; }
+.when-liver sup{font-size: 10px;}
+.while-the-body{float: left; width: 100%; padding: 35px 30px 44px; font-size: 14px; color: #4d4d4d; line-height: 21px; font-weight: 300; background: #ffffff; min-height: 249px;}
+.while-the-body sup{font-size: 10px;}
+.while-the-body b{font-weight: 700; text-transform: uppercase;}
+
+.food-containing-row{float: left; width: 100%; background: #ffffff;}
+.food-containing-row h4{float: left; max-width: 495px; width: 39.91935483870968%;  padding: 105px 50px 105px 45px; font-size: 24px; line-height: 27px; color: #231f20; font-weight: 700; }
+.food-containing-row h4 sup{font-size: 15px;}
+.soyabin,.yolk-milk,.seafood,.mini-thumb,.more-about{float: left; width: 20.02688172043011%; position: relative;}
+.soyabin{background: url(../images/soyabin-figure.jpg) no-repeat center center; background-size: cover; min-height: 249px;}
+.yolk-milk{background: url(../images/milk-figure.jpg) no-repeat center center; background-size: cover;min-height: 249px;}
+.seafood{background: url(../images/seafood-figure.jpg) no-repeat center center; background-size: cover;min-height: 249px;}
+.soyabin span,.yolk-milk span,.seafood span{position: absolute; left: 0; top: 50%; text-align: center; display: block; width: 100%; font-size: 16px; color: #ffffff; font-weight: 700; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%);}
+
+.lower-content-wrap,.lower-text-wrap figure img,.more-about figure img{float: left; width: 100%; }
+.lower-text-wrap{float: left; max-width: 495px; width: 39.91935483870968%; background: #ffffff;}
+.lower-text-wrap h3{font-size: 36px; line-height: 38px; color: #231f20; font-weight: 700; padding: 75px 15px 0 45px;}
+.lower-text-wrap figure{float: right; max-width: 236px; position: relative; margin-top: -40px; margin-right: 45px;}
+.mini-thumb{font-size: 14px; line-height: 21px; color: #4d4d4d; font-weight: 300; padding: 35px 30px;}
+.mini-thumb sup{font-size: 10px;}
+.mini-thumb span{font-size: 12px;}
+.mini-thumb.gray{background: url(../images/mini-phospholisids-figure.jpg) no-repeat center bottom; background-size: cover; min-height: 248px;}
+.mini-thumb.white{background: #ffffff; }
+b{font-weight: 700;}
+.more-about{background: #24b1ae; position: relative; padding: 72px 30px 35px; min-height: 248px;}
+.more-about a{font-size: 20px; line-height: 23px; color: #ffffff; font-weight: 700; /*background: url(../images/arrow-right.png) no-repeat left center;*/ padding-left: 50px; position: relative;}
+.more-about a:hover{text-decoration: underline;}
+.more-about a:after{position: absolute; left: 0; top: 0; width: 37px; height: 60px; content: ""; background: url(../images/arrow-right.png) no-repeat center center; background-size: cover;}
+.more-about figure{position: absolute; left: 0; bottom: -50px; width: 100%;}
+.phospholipids-page .lower-content-wrap{background: #ffffff; padding: 0;}
+/* //End phospholipids page */
+
+/* // Beginning Respect Your Liver*/
+.what-does-liver{ position: relative}
+.what-does-liver-image{ float: right; right:0; top: 0; position: absolute; max-width: 453px; z-index: 2}
+.what-does-liver-image img{ float:left; width:100% }
+.what-does-liver h2{ padding: 80px 20px 23px 45px; max-width: 350px; }
+.the-primary-text{ float: left; width: auto; position:relative; font-size: 18px; line-height: 24px; color: #4d4d4d; font-weight: 700; padding: 30px 25px 0 70px; max-width: 325px;}
+.the-primary-text sup{font-size: 10px;}
+.what-does-line{ float: left;margin-left:43px; max-width: 329px; width: 66.46464646464646%; position: absolute; left: 0; top: 0;z-index: 3; display: none;}
+.what-does-line img{ float: left; width: 100%;}
+.produce-text{ float: left; width: 100%; padding: 35px 70px 25px 46px;}
+.produce-text span{ float: left; width: 100%; font-size: 13px; line-height: 22px; font-weight:600; color: #4d4d4d}
+.produce-text dfn{ float: left; width: 100%;font-size: 13px; line-height: 22px;font-weight:300; color: #4d4d4d;font-style: normal;}
+.your-bodys{ background: none;  color: #4d4d4d; font-weight: 300; padding: 37px 30px 35px;}
+.did-you-know{ float: left; width: 100%; position: relative;background: url(../images/did-you-know.png) no-repeat 0 0;  background-size: cover; color: #ffffff; padding: 40px 30px 40px;}
+.phospholids-figure .your-liver{ float: left;position: absolute; right:0; bottom: 0; max-width: 249px; z-index: 3;padding: 40px 28px 60px 33px; font-size: 14px; line-height: 21px; color: #ffffff; font-weight: 300; background: #24B1AE}
+.phospholids-figure .your-liver sup{font-size: 10px;}
+.did-you-know b{ font-size: 20px; line-height: 22px; font-weight: 700}
+.look-out-section{ float: left; width: 100%; background: #ffffff;}
+.look-out-for,.things-that{ float: left;max-width: 493px; width:39.75806451612903%; }
+.look-out-for h2{ float: left;font-size: 40px; line-height: 46px;font-weight: 700; padding: 45px 0 0 42px; max-width: 320px;}
+.liver-works{ float: left; width: 100%; font-size: 14px; line-height: 23px; font-weight: 300; padding: 20px 25px 25px 42px; color: #4d4d4d}
+.liver-works sup{font-size: 9px;}
+.liver-works b{ font-weight: 700}
+
+
+.things-that-wrap{ float: left; width: 100%; background: #EFF1F2; padding-bottom: 78px;}
+.sign-that-text{ float: left;max-width:747px; width:60.24193548387097%; background: #EE7501; padding: 42px 0 30px 0; }
+.sign-that{ float: left; max-width: 277px; width: 37.08165997322624%; padding-top: 10px;}
+.sign-that h3{ float: left; font-size: 30px; line-height: 33px; padding:0 15px 0 30px; color: #ffffff; font-weight: 300; max-width: 260px;}
+.sign-that h3 sup{font-size: 16px;}
+.sign-that-list{ float:left; max-width: 470px; width:62.91834002677376%; }
+.sign-that-list ul{list-style: none; margin: 0; padding: 0;}
+.sign-that-list ul li{ float:left; width: 100%; font-size: 14px; line-height: 22px; color: #ffffff;background: url(../images/sign-that-line.png) no-repeat 0 12px; padding-left: 9px; }
+
+.things-that-section{ float: left; width: 100%; background: #F5F6F7; padding: 58px 0px 50px 0px}
+.things-that{padding: 20px 40px 15px 45px;}
+.things-that h3{ float: left; width: 100%; font-size: 30px; line-height: 36px; color: #333333; font-weight: 400}
+.things-that span{ float: left; width: 100%; font-size: 18px; line-height: 25px; color: #333333;font-weight: 700; padding-top: 65px}
+.things-that p{ float: left; width: 100%; font-size: 14px; line-height: 21px; color: #333333; padding-top: 25px;}
+.things-that p sup{font-size: 9px;}
+.things-that-right{float: left;max-width:747px; width:60.24193548387097%; position: relative; padding-right: 25px;}
+.things-that-man{float: left; max-width:705px;}
+.things-that-man img{float: left; width: 100%}
+.liver-item1,.liver-item2,.liver-item3,.liver-item4,.liver-item5{ position: absolute; left:auto; right: auto; top: 0; width: auto; display: none;}
+.lower-content-section{ float: left; width: 100%;}
+.lower-content-section .lower-content-wrap{ background: #EFF1F2}
+
+.gray-blank-div{float: left; width: 100%; height: 78px; background: #eff1f2;}
+.respect-your-liver .lower-content-wrap{background: #ffffff; padding-top: 0;}
+
+.respect-your-liver .mini-thumb.gray{background: #f5f6f7; font-weight: 700; font-size: 18px; line-height: 23px;}
+.respect-your-liver .mini-thumb.white{font-weight: 700; font-size: 18px; line-height: 23px;}
+.respect-your-liver .more-about{background: #ee7501;}
+.respect-your-liver .lower-text-wrap figure{margin-top: 0;}
+
+.important-notification{float: left; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, .15); z-index: 99; display: none; padding: 0 15px;}
+.notification-inner{max-width: 658px; width: 100%; margin: 0 auto; clear: both; overflow: hidden; background: #ffffff; margin-top: 255px; position: relative; padding-bottom: 50px;}
+#close-btn{position: absolute; right: 19px; top: 17px; z-index: 5; width: 19px; height: 19px; cursor: pointer;}
+.notification-inner span{display: block; text-align: center; padding-top: 55px; font-size: 17px; line-height: 20px; color: #333333; font-weight: 700; text-transform: uppercase;}
+.notification-inner p{float: left; width: 100%; text-align: center; padding: 20px 55px 0; color: #9ba8af; font-size: 12px; line-height: 18px; color: #9ba8af; text-align: center; text-transform: uppercase;}
+.notification-inner figure{max-width: 321px; margin: 0 auto; clear: both; overflow: hidden; clear: both; padding: 20px 15px 0;}
+.notification-inner figure img{width: 100%;}
+.visite-link{float: left; width: 100%; color: #9ba8af; font-size: 12px; text-align: center; text-transform: uppercase; padding-top: 30px;}
+.visite-link a{color: #25b1ae; display: inline-block;}
+.visite-link a:hover{text-decoration: underline;}
+
+/*.notification-show{overflow-y: hidden;}*/
+
+/* // End Respect Your Liver*/
+
+
+
+/* // Beginning Package Insert */
+.package-insert-details{ float: left; width: 100%; background: #ffffff; padding: 60px 0 0 0 }
+.package-insert{ float: left; max-width: 370px; width:29.83870967741935%; padding-right: 25px;}
+.package-insert h3{ float: left; width: 100%; padding-left: 52px; font-size: 36px; line-height: 38px; color: #000000; font-weight: 700 }
+.package-insert-content-section{ float: left; max-width:870px; width:70.16129032258065%;padding-right: 124px  }
+.package-insert-text{ float:left; width: 100%; margin-top: 7px}
+.package-insert-text p{ float: left; width:100%; padding-bottom: 22px; font-size: 14px; line-height: 22px; color: #4e4d4d;}
+.package-insert-text h6,.sap-id-number h6{ float: left; width:100%; font-size: 14px; line-height: 20px; color: #4e4d4d; font-weight: 700; text-transform: uppercase;}
+.package-insert-text p:nth-child(31){ padding-bottom:0px}
+.package-insert-text h6:nth-child(32){ padding-bottom:23px}
+.package-insert-text h6:nth-child(22){ text-transform: lowercase}
+.sap-id-number{ float: left; width: 100%; padding-top: 26px}
+.sap-id-number h6{ font-weight: 300; padding-bottom: 9px}
+.sap-row{ float:left; width: 100%; border-top: 2px solid #000000; padding: 10.2px 0;}
+.sap-row span{ float:left; width: 144px; display:block; font-size: 14px; line-height: 21px; color: #4e4d4d;}
+.sap-row dfn{ float:left; display:block; color: #4e4d4d; font-style: normal;font-size: 14px; line-height: 21px;}
+/* // End Package Insert*/
+
+/* // Beginning Interesting Read */
+.intersting-read{ float: left; width: 100%; background: #ffffff; padding-bottom: 20px;}
+.interesting-thumb{float: left; max-width: 992px; width: 80%;}
+.interesting-thumb:nth-child(3){float: right;}
+.interesting-image{ float: left; width: 50%; position: relative}
+.interesting-image img{ float: left; width: 100%;}
+.interesting-overlay{ float:left; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(000,000,000,.3);z-index: 5}
+.interesting-overlay h3{ position: absolute; left: 50%; width: 100%; top:50%; text-align: center; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%);font-size: 36px; line-height: 38px; color: #ffffff; font-weight: 700; max-width: 390px;}
+
+.intersting-read .when-liver{ background: none; color: #333333; font-weight: 300}
+.intersting-read .when-liver b{font-weight: 700; color: #4d4d4d;}
+.intersting-read .when-liver span{ color: #25b1ae;}
+.plus-wrap{ position: absolute; right: 0; bottom: 0; width: 39px;z-index: 10;background: #ffffff; padding:13px }
+.plus-wrap img{ float: left; width: 100%;}
+.like-us-fb,.like-us-fb img{ float: left; width: 100%;}
+.like-us-fb{max-width: 249px;}
+.like-us-fb a{display: block;}
+.like-us{ float:left;}
+.load-more{ float: left; width: 100%; background: #F47B20;}
+.load-more a{text-align: center; width: 100%; color: #ffffff; font-size: 16px; line-height: 23px; font-weight: 700; padding: 21px 0; height: 65px;}
+
+.intersting-read .when-liver{padding-top: 62px;}
+.intersting-read .like-us .when-liver{ padding-top: 35px; font-size: 16px; line-height: 23px; padding-bottom: 25px;}
+
+
+
+.tab-content{float: left; width: 100%;}
+.copy-right-area p{text-decoration: none;}
+.copy-right-area p span{text-decoration: underline;}
+.copy-right-area p a{color: #4e4d4d; text-decoration: underline;}
+.copy-right-area p a:hover{text-decoration: none;}
+
+.things-that-man{position: relative;}
+.tabs-figure{float: left; width: 100%;}
+.tabs-wrap{float: left; width: 100%; height: 100%; position: absolute; left: 0; top: 0;}
+.tabs-wrap img{ width: 100%;}
+
+#tabs area{outline: none;}
+.things-that-right{float: right;}
+.interesting-overlay,.interesting-image{min-height: 120px; -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; transition: all .3s ease-in;}
+.intersting-read{display: none}
+.interesting-image:hover .interesting-overlay,.interesting-image:hover .plus-wrap{opacity: 0; -webkit-transition: all .3s ease-in; -moz-transition: all .3s ease-in; transition: all .3s ease-in;}
+
+.interesting-thumb a{display: block;}
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    .header-upper{display: none;}
+    .main-header{position: fixed; left: 0; top: 1px; margin-top: -1px;}
+    .main-header-wrap{padding: 10px 0;}
+    .main-log{width: 115px; margin: 0 0 0 15px;}
+    .social-wrap{display: none;}
+    nav#main-nav{width: 100%; padding-top: 20px; display: none;}
+    nav#main-nav ul li,nav#main-nav ul li:nth-child(even){width: 100%; max-width: 100%;}
+    nav#main-nav ul li a { font-size: 14px; line-height: 18px; padding: 10px 0;}
+    #phone-nav{display: block;}
+    
+    .center-wrap{padding: 0;}
+    .main-content-section,.contact-page-section{padding-top: 51px; padding-bottom: 0;}
+    .content-wrap{width: 100%;}
+    .content-row figure.capsule-box{width: 100%; float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .welcome-text-wrap{width: 100%; padding: 30px 15px;}
+    .welcome-text-wrap h2 { font-size: 22px; line-height: 30px; padding-top: 0; }
+    .welcome-text-wrap h2 sup{font-size: 15px; margin-left: auto;}
+    .welcome-text-wrap h6 { font-size: 13px; line-height: 18px; padding: 10px 0 15px; }
+    .welcome-text-wrap p { padding-top: 15px; font-size: 14px; line-height: 20px;}
+    
+    .content-row figure{float: none; width: 100%; clear: both; overflow: hidden; margin: 0 auto;}
+    .content-row:nth-child(2){padding-top: 0;}
+    .content-row h3{width: 100%; padding: 15px; font-size: 22px; line-height: 28px;}
+    aside{float: none; margin: 0 auto; clear: both; overflow: hidden; width: 100%; max-width: 245px; padding-top: 20px;}
+    .side-bar-text h4{font-size: 20px; padding-top: 15px;}
+    .side-bar-text h4 sup{font-size: 13px;}
+    .side-bar-text a{margin-top: 20px;}
+    
+    .shoping-card{margin-top: 10px; padding: 0 10px;}
+    .shoping-card span{width: 76%; padding: 2px 15px 15px 20px;}
+    .lower-content-wrap{padding-top: 30px;}
+    .lower-content-wrap .left-col{width: 100%; max-width: 250px; float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .left-col .lower-text{padding: 20px 15px; font-size: 16px; line-height: 22px;}
+    .lower-content-wrap .right-col{width: 100%;}
+    .lower-content-wrap .right-col .overlay-text .inner-overlay{display: none;}
+    .lower-content-wrap .right-col .overlay-text h3{font-size: 26px; padding-top: 95px; padding-left: 30px; line-height: 32px;}
+
+
+    .post-summary .col{width: 100%;}
+    .post-summary-text p{padding-top: 15px;}
+    .post-summary-text{padding-bottom: 20px;}
+    
+    .main-footer{padding: 0px 20px 20px; margin: 30px 0;}
+    .single-widget{width: 100%; max-width: 100%; margin: 0; padding: 30px 0 0;}
+    .copy-right-area{float: left; text-align: left; padding-top: 30px;}
+    .footer-logo{float: left;}
+    .copy-right-area p:nth-child(2){padding-top: 15px;}
+    
+    .contact-essential{margin: 0; padding: 20px 0 0; width: 100%; float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .essential-title{font-size: 15px; line-height: 22px;}
+    .pay-link{margin-top: 0;}
+    .card-image{width: 45px;}
+    .card-online{margin-top: 30px;}
+    .card-online span { margin-left: 25px; font-size: 15px; line-height: 22px; }
+    .essential-image{float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    
+    .send-message{float: none; width: 100%; margin: 30px auto 0; clear: both; overflow: hidden;}
+    .message-form{padding: 30px 20px;}
+    .message-form h4{font-size: 18px; text-align: center;}
+    .form-wrap{margin-top: 20px;}
+    .aside-text-right{width: 100%; margin: 0; padding-top: 20px; max-width: 100%;}
+    .aside-text-right p{font-size: 14px; line-height: 22px;}
+    
+    .post-content{float: left; width: 100%; padding: 0 15px; margin: 0;}
+    .post-content span{padding-top: 30px;}
+    .post-content h3 { font-size: 22px; line-height: 30px; padding-top: 15px;}
+    .post-content h6{padding-top: 25px; font-size: 16px; line-height: 22px; padding-bottom: 10px;}
+    .post-content a{margin-top: 25px;}
+    .blog-sidebar{padding: 30px 15px 0; width: 100%; margin: 0 auto; clear: both; overflow: hidden;}
+    .similar-post{padding: 30px 0 0 20px;}
+    .similar-post ul{padding-top: 20px;}
+    
+    .essensiale-extreme-page .content-wrap{width: 100%;}
+    .essensiale-extreme-page .content-row:first-child{padding: 30px 15px 10px;}
+    .essensiale-extreme-page .content-row:first-child h2{width: 100%; font-size: 24px; line-height: 30px;}
+    .essensiale-extreme-page .content-row p{padding: 15px 0; width: 100%; font-size: 14px;}
+    .essensiale-extreme-page .content-row:nth-child(2){padding: 30px 15px 0;}
+    .essensiale-extreme-page .content-row:nth-child(2) figure{padding: 0; float: none; max-width: 450px; margin: 0 auto; clear: both; overflow: hidden;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text{position: relative; left: auto; top: auto; bottom: auto; padding: 15px 0; float: left; width: 100%;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text h3{font-size: 22px; line-height: 30px;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text p{font-size: 14px; line-height: 22px; padding-top: 15px;}
+    
+    .essensiale-extreme-page .content-row:nth-child(3){padding:0px 0 30px; }
+    .fun-fact{position: relative; left: auto; top: auto; padding: 30px 15px 20px;; margin: 0; width: 100%; max-width: 100%;}
+    .why-daily-epls{padding: 30px 15px 0;}
+    .content-row .why-daily-epls h3{padding: 0; font-size: 18px; line-height: 24px;}
+    .essensiale-extreme-page .content-row .why-daily-epls p{font-size: 14px; padding-top: 15px;}
+    .why-daily-epls figure{padding-top: 20px; max-width: 200px;}
+    .extreme-sidebar{width: 100%; max-width: 100%;}
+    .due-to-higher, .contain-300mg,.why-take,.buy-online{padding: 30px 15px 20px;}
+    .contain-300mg span{font-size: 30px;}
+    .why-take{font-size: 14px;}
+    .buy-online p{width: 75%; padding: 10px 0 0 15px;}
+    
+    .what-are-essential-text-wrap { max-width: 100%; width: 100%; }
+    .what-are-essential-text-wrap h2 { font-size: 26px; line-height: 32px; padding: 30px 15px 25px; text-align: center;}
+    .what-are-essential-text-wrap .lower-text { padding: 25px 15px 25px; font-size: 15px; line-height: 22px; min-height: 50px;     max-width: 496px; float: none; margin: 0 auto 15px; clear: both; overflow: hidden;}
+    .phospholids-figure { float: none; width: 100%; margin: 0 auto; clear: both; overflow: hidden;}
+    .what-are-essential-row aside{width: 100%; float: none; max-width: 245px; padding-top: 0; margin-top: 25px;}
+    .when-liver,.while-the-body{ padding: 30px 15px 25px; min-height: 50px;}
+    .food-containing-row h4 { width: 100%; max-width: 100%; text-align: center; padding: 10px 15px 15px; font-size: 18px; line-height: 22px;}
+    .soyabin, .yolk-milk, .seafood, .mini-thumb, .more-about{width: 100%;}
+    .phospholipids-page .upper-content-wrap{padding-bottom: 0;}
+    .lower-text-wrap{width: 100%; max-width: 100%;}
+    .lower-text-wrap h3 { font-size: 24px; line-height: 30px; padding: 30px 15px 25px; text-align: center;}
+    .lower-text-wrap figure{float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .mini-thumb { padding: 30px 15px;}
+    .more-about{max-width: 245px; float: none; margin: 0 auto;}
+    .more-about a{font-size: 16px;}
+    .more-about figure { position: relative; left: auto; bottom: auto; padding-top: 25px; max-width: 284px; float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .soyabin, .yolk-milk, .seafood{margin: 10px auto 0; float: none; clear: both; max-width: 245px;}
+    .mini-thumb{float: none; max-width: 245px; margin: 0 auto; clear: both; overflow: hidden;}
+    
+    .what-does-liver{width: 100%; max-width: 100%;}
+    .what-does-liver h2 { padding: 30px 15px; max-width: 100%; font-size: 24px; }
+    .what-does-liver-image{float: none; max-width: 290px; margin: 0 auto; clear: both; overflow: hidden; position: relative;  top: auto; right: auto;}
+    .the-primary-text{padding: 25px 15px 0; font-size: 16px; line-height: 22px;}
+    .produce-text{padding: 20px 15px 25px;}
+    .phospholids-figure .your-liver{position: relative; width: 100%; max-width: 100%; padding: 30px 15px 25px;}
+    .respect-your-liver .upper-content-wrap{padding-bottom: 30px;}
+    .look-out-for{width: 100%; max-width: 100%;}
+    .look-out-for{padding: 25px 15px 20px;}
+    .look-out-for h2{padding: 0; font-size: 24px; max-width: 100%; width: 100%;}
+    .liver-works{padding: 10px 0 0;}
+    .when-liver{padding-top: 0;}
+    .sign-that-text{width: 100%; max-width: 100%; padding: 30px 15px 25px;}
+    .sign-that,.sign-that-list{width: 100%; padding: 0; max-width: 100%;}
+    .sign-that h3,.things-that h3{font-size: 22px; line-height: 30px; padding: 0;}
+    .sign-that-list{padding-top: 15px;}
+    .look-out-for, .things-that{width: 100%; max-width: 100%; padding: 0 15px;}
+    .things-that-section{padding: 30px 0 20px;}
+    .things-that span{padding-top: 20px; font-size: 16px;}
+    .things-that p{padding-top: 15px;}
+    .mobi{display: block;}
+    .desktop{display: none;}
+    .things-that-man{max-width: 305px; margin: 0 auto; clear: both; overflow: hidden; float: none; padding-top: 20px;}
+    .gray-blank-div{height: 30px;}
+    .respect-your-liver .lower-text-wrap figure{padding-bottom: 20px;}
+    .sign-that h3 sup{font-size: 12px;}
+    .look-out-for{padding: 20px 15px 25px;}
+    .mini-thumb.gray{min-height: 40px;}
+    .respect-your-liver .mini-thumb.gray,.respect-your-liver .mini-thumb.white{font-size: 16px; padding: 30px 25px;}
+    
+    .interesting-thumb{width: 100%; max-width: 100%;}
+    .interesting-image{width: 100%; max-width: 495px; float: none; margin: 15px auto 0; clear: both; overflow: hidden; }
+    .interesting-image:first-child{margin-top: 0;}
+    .interesting-overlay h3{font-size: 24px; line-height: 30px; padding: 0 15px;}
+    .intersting-read .when-liver{padding-top: 10px;}
+    .like-us{float: none; padding-top: 30px;}
+    .notification-inner p{padding: 20px 15px 0;}
+    .notification-inner{margin-top: 150px;}
+    
+    .package-insert,.package-insert-content-section{ max-width: 100%; width: 100%;}
+    .package-insert h3{ padding:0 15px; font-size: 24px;}
+    .package-insert-content-section{ padding: 0 15px}
+    .package-insert-details{ padding-top: 90px}
+    .package-insert-text{ margin-top: 30px}
+    
+    .phospholipids-page .when-liver{padding-top: 25px;}
+    .phospholipids-page .mini-thumb.gray { background: #f6f6f8;}
+    .more-about a{padding-left: 40px;}
+    .more-about a:after{top: 12px; width: 25px; height: 43px;}
+    .phospholipids-page .food-containing-row h4{padding-top: 0;}
+    .buy-online p{padding-top: 2px;}
+    
+    /*.essensiale-extreme-page .content-row:nth-child(2) figure{}*/
+    .things-that-man.mobi{display: none;}
+    .things-that-right.desktop{display: block;}
+    .things-that-right{width: 100%; padding: 0;}
+    .things-that-man{padding-top: 0;}
+    .things-that{padding-top: 20px;}
+    .copy-right-area p a{display: inline;}
+    
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .notification-inner{margin-top: 65px;}
+    .shoping-card span,.buy-online p{padding-top: 10px;}
+    .main-header-wrap{padding: 10px 0; max-height: 290px; overflow-y: auto;}
+
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    nav#main-nav ul li a{font-size: 10px; line-height: 15px;}
+    .welcome-text-wrap h2{font-size: 29px; line-height: 38px; padding-top: 0;}
+    .welcome-text-wrap h6{padding: 20px 0 25px;}
+    .welcome-text-wrap h6{font-size: 14px;}
+    .welcome-text-wrap p{padding-top: 20px; font-size: 15px; line-height: 20px;}
+    aside figure a.play-btn { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; }
+    .side-bar-text{padding: 25px 15px 20px;}
+    .side-bar-text h4 { font-size: 17px; line-height: 22px; padding-top: 15px;}
+    .side-bar-text a{margin-top: 15px;}
+    .content-row h3 { padding-left: 20px; padding-top: 15px; font-size: 22px; line-height: 28px; width: 40%; }
+    .content-row figure{width: 60%;}
+    .lower-content-wrap .left-col{width: 45%;}
+    .lower-content-wrap .right-col{width: 55%;}
+    .post-summary .col .overlay-text P{font-size: 20px; line-height: 28px; padding: 20px 10px;}
+    .post-summary-text{padding: 0 15px;}
+    .post-summary-text p{font-size: 15px; padding-top: 20px;}
+    .post-summary-text a{font-size: 15px;}
+    .left-col .lower-text{padding: 35px 20px; font-size: 18px;}
+    .lower-content-wrap .right-col .overlay-text .inner-overlay{width: 180px; font-size: 14px; line-height: 20px; padding-top: 25px; }
+    .lower-content-wrap .right-col .overlay-text h3 { font-size: 22px; line-height: 28px; padding-top: 70px; padding-left: 20px;}
+    .main-footer{margin-top: 38px; padding: 40px 25px 35px;}
+    .copy-right-area{width: 35%;}
+    .single-widget ul li{line-height: 22px;}
+    
+    .contact-essential{padding-top: 50px;}
+    .message-form{padding: 50px 25px 24px;}
+    .card-image{width: 55px;}
+    .card-online span{font-size: 17px; line-height: 22px;}
+    
+    .essensiale-extreme-page .content-row p{font-size: 14px;}
+    .essensiale-extreme-page .content-wrap{width: 75%;}
+    .extreme-sidebar{width: 25%;}
+    .essensiale-extreme-page .content-row:first-child{padding: 55px 30px 40px 25px;}
+    .essensiale-extreme-page .content-row:first-child h2{font-size: 25px;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text h3{font-size: 22px; line-height: 28px;}
+    .content-row .why-daily-epls h3{width: 100%; padding-top: 0;}
+    .essensiale-extreme-page .content-row .why-daily-epls p{font-size: 15px;}
+    .contain-300mg{padding: 50px 30px;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text{padding-left: 35px; padding-bottom: 25px;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text p{padding-top: 25px; font-size: 14px;}
+    .content-row .why-daily-epls h3{padding-left: 0;}
+    .contain-300mg span{font-size: 33px;}
+    .due-to-higher, .contain-300mg{padding: 30px 20px;}
+    .item-list{padding: 30px 15px 20px 20px;}
+    .why-take,.buy-online{padding: 25px 20px 30px;}
+    
+    .what-are-essential-text-wrap{ max-width: 100%; width: 100%;}
+    .what-are-essential-text-wrap .lower-text,.what-are-essential-text-wrap h2,.phospholids-figure,.what-are-essential-row aside{width: 50%;}
+    .while-the-body{min-height: 10px;}
+    .what-are-essential-text-wrap h2 {font-size: 30px; padding: 101px 0 50px 45px;}
+    .what-are-essential-text-wrap .lower-text{padding-top: 40px;}
+    .food-containing-row h4{max-width: 100%; width: 50%; padding-bottom: 25px;}
+    .soyabin,.yolk-milk,.seafood,.lower-text-wrap,.mini-thumb,.more-about{width: 50%;}
+    .yolk-milk,.mini-thumb.white{clear: both;}
+    .lower-text-wrap h3 { font-size: 32px; padding: 35px 15px 0 35px;}
+    .lower-text-wrap figure{float: none; margin: 15px auto 0;}
+    .phospholipids-page .upper-content-wrap{padding-bottom: 45px;}
+    
+    .what-does-liver{width: 50%;}
+    .what-does-liver h2 { padding: 35px 20px 23px 35px;}
+    .look-out-for, .things-that,.look-out-for h2,.sign-that-text{width: 100%; max-width: 100%;}
+    .sign-that,.sign-that-list{width: 50%; max-width: 50%;}
+    .things-that-section{padding: 30px 0; }
+    
+    .things-that span{padding-top: 25px;}
+    .things-that-man.mobi{display: block; padding-top: 30px; float: none; max-width: 450px; margin: 0 auto; clear: both; overflow: hidden;}
+    .things-that-right.desktop{display: none;}
+    .respect-your-liver{padding-bottom: 50px;}
+    .phospholipids-page{padding-bottom: 60px;}
+    
+    .interesting-thumb, .intersting-read aside{width: 100%;}
+    .like-us-fb{width: 25%;}
+    .intersting-read .like-us .when-liver{width: 75%;}
+    
+    /*==Beginning Package Insert=====*/
+
+    .package-insert h3{ padding-left: 0;font-size: 32px}
+    .package-insert-content-section{ padding-right: 15px;width: 64.16129%;}
+    .package-insert-details{ padding-top: 36px}
+    .package-insert { width: 35.83871%;}
+    /*===Package Insert====*/
+    
+    
+    
+
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+	
+    nav#main-nav ul li a{font-size: 13px;}
+    .side-bar-text{padding: 25px 30px 20px 30px;}
+    .side-bar-text h4{font-size: 20px;}
+    .welcome-text-wrap h2{padding-top: 15px; line-height: 44px;}
+    .content-row h3{padding-top: 25px; width: 40%;}
+    .content-row figure{width: 60%;}
+    .post-summary .col .overlay-text P{font-size: 25px; padding-top: 20px;}
+    .post-summary-text { padding: 0 35px 0 30px; }
+    .lower-content-wrap .right-col .overlay-text h3{font-size: 30px; padding-left: 30px;}
+    .lower-content-wrap .right-col .overlay-text .inner-overlay{padding-top: 100px;}
+    .left-col .lower-text{padding: 45px 15px 25px 40px;}
+    .copy-right-area{width: 35%;}
+    
+    .essensiale-extreme-page .content-row p{font-size: 14px;}
+    .essensiale-extreme-page .content-wrap{width: 75%;}
+    .extreme-sidebar{width: 25%;}
+    .essensiale-extreme-page .content-row:first-child{padding: 65px 30px 50px 45px;}
+    .essensiale-extreme-page .content-row:first-child h2{font-size: 32px;}
+    .essensiale-extreme-page .content-row:nth-child(2) .support-text h3{font-size: 25px}
+    .content-row .why-daily-epls h3{width: 100%; padding-top: 0;}
+    .essensiale-extreme-page .content-row .why-daily-epls p{font-size: 15px;}
+    .contain-300mg{padding: 50px 30px;}
+    
+    .more-about a{font-size: 17px; padding-left: 35px;}
+    .more-about a:after {top: 12px; width: 25px; height: 42px;}
+    .mini-thumb.gray{min-height: 285px;}
+    
+    .phospholids-figure .your-liver{padding: 30px 20px 30px 20px; font-size: 13px;}
+    .what-does-liver h2{padding-top: 50px;}
+    
+    .interesting-thumb, .intersting-read aside{width: 100%;}
+    .like-us-fb{width: 25%;}
+    .intersting-read .like-us .when-liver{width: 75%;}
+    
+    .package-insert h3{padding-left: 8px; font-size: 32px;}
+
+    .did-you-know b{font-size: 16px;}
+    .notification-inner{margin-top: 180px;}
+    
+    
+    
+    
+}
+
+
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
+
+
+
+
+
+
+
